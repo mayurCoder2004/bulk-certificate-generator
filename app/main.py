@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 
+
 app = FastAPI(
-    title="Bulk Certificate Generator API",
-    description="API for generating certificates in bulk.",
-    version="0.1.0",
+    title="Bulk Certificate Generator",
+    version="1.0.0",
 )
 
 
-@app.get("/health", tags=["Health"])
-def health_check() -> dict[str, str]:
+@app.get("/health")
+def health_check():
     return {"status": "ok"}
